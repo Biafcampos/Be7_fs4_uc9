@@ -1,0 +1,15 @@
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\bin\Debug\net6.0\Be7_fs4_uc9.exe
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\bin\Debug\net6.0\Be7_fs4_uc9.deps.json
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\bin\Debug\net6.0\Be7_fs4_uc9.runtimeconfig.json
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\bin\Debug\net6.0\Be7_fs4_uc9.dll
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\bin\Debug\net6.0\Be7_fs4_uc9.pdb
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.csproj.AssemblyReference.cache
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.AssemblyInfoInputs.cache
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.AssemblyInfo.cs
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.csproj.CoreCompileInputs.cache
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.dll
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\refint\Be7_fs4_uc9.dll
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.pdb
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\Be7_fs4_uc9.genruntimeconfig.cache
+C:\Users\mimim\Desktop\prj_user\Be7_fs4_uc9\obj\Debug\net6.0\ref\Be7_fs4_uc9.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Be7_fs4_uc9/1.0.0": {
+        "runtime": {
+          "Be7_fs4_uc9.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Be7_fs4_uc9/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
