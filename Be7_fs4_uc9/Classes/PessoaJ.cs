@@ -7,7 +7,7 @@ using Be7_fs4_uc9.Interfaces;
 
 namespace Be7_fs4_uc9.Classes
 {
-     public class PessoaJ : Pessoa, IPessoaJ
+     public class PessoaJuridica : Pessoa, IPessoaJ
     {
         public string ?cnpj { get; set; }
         public string ?razaoSocial { get; set; }
@@ -16,13 +16,13 @@ namespace Be7_fs4_uc9.Classes
         
         public override float PagarImposto(float rendimento)
         {
-          
+      
             if (rendimento <= 1500)
             {
                 return (rendimento / 100) * 3; 
             }
             else if(rendimento > 1500 && rendimento <= 3500){
-                return (rendimento / 100) * 5; 
+                return (rendimento / 100) * 5;    //return rendimento * 0.02;
             }
             else if(rendimento > 3500 && rendimento <= 6000){
                 return (rendimento / 100) * 7;
@@ -32,7 +32,13 @@ namespace Be7_fs4_uc9.Classes
             }
         }
 
-   
+    /*
+        XX.XXX.XXX/0001-XX
+        
+        XXXXXXXXXXXXXX
+        |
+        \d{2}
+    */
 
     public bool ValidarCnpj(string cnpj)
         {
@@ -40,13 +46,15 @@ namespace Be7_fs4_uc9.Classes
             {
                 if(cnpj.Length == 18)
                 {
-                    if(cnpj.Substring(11,4) == "0001"){
+                    if(cnpj.Substring(11,4) == "0001") // ele vai iniciar no caracteres 11 e pegar os proximos 4
+                    {
                         return true;
                     }
                 }
                 else if(cnpj.Length == 14)
                 {
-                    if(cnpj.Substring(8,4) == "0001"){
+                    if(cnpj.Substring(8,4) == "0001")//ele vai iniciar no caractere 8 e pegar os proximos 4
+                    {
                         return true;
                     }
                 }
@@ -54,18 +62,20 @@ namespace Be7_fs4_uc9.Classes
         return false;
         }   
 
-        public void Inserir(PessoaJ pj)
+        public void Inserir(PessoaJuridica pj)
         {
             VerificarPastaArquivo(caminho);
 
-            string[] pjString = {$"{pj.nome},{pj.cnpj},{pj.razaoSocial}"};
+            string[] pjString = {$"{pj.nome},{pj.cnpj},{pj.razaoSocial},{pj.rendimento},{pj.endereco.logradouro},{pj.endereco.numero},{pj.endereco.complemento},{pj.endereco.endComercial}"};
 
             File.AppendAllLines(caminho, pjString);
         }
 
-        public List<PessoaJ> Ler()
+        public List<PessoaJuridica> Lera()
         {
-            List<PessoaJ> listaPj = new List<PessoaJ>();
+            VerificarPastaArquivo(caminho);
+
+            List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
 
             string[] linhas = File.ReadAllLines(caminho);
 
@@ -74,17 +84,24 @@ namespace Be7_fs4_uc9.Classes
             {
                 string[] atributos = cadaLinha.Split(",");
 
-                PessoaJ cadaPj = new PessoaJ();
-                
+                PessoaJuridica cadaPj = new PessoaJuridica();
+                Endereco cadaEnd = new Endereco();
+
                 cadaPj.nome = atributos[0];
                 cadaPj.cnpj = atributos[1];
                 cadaPj.razaoSocial = atributos[2];
-
+                cadaPj.rendimento = float.Parse(atributos[3]);
+                cadaEnd.logradouro = atributos[4];
+                cadaEnd.numero = int.Parse(atributos[5]);
+                cadaEnd.complemento = atributos[6];
+                cadaEnd.endComercial = bool.Parse(atributos[7]);
+                cadaPj.endereco = cadaEnd;
                 listaPj.Add(cadaPj);
             }
             return listaPj;
         }
     }
 
+    }
+
     
-}
